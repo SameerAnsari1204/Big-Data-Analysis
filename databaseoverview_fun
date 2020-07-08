@@ -1,0 +1,82 @@
+DataBase Overview
+
+Sameer Ansari
+2020-06-27
+===
+
+Database:      	fun
+===
+Notes:
+1.
+Column and table descriptions are estimates based on examination of the database, not description from the data sources.
+2.
+PK is not the description of assumed data relationships, not database constraints.
+===
+
+
+Table: card_rank
+
+Columns (2)
+  	Name 	Type 		Comment
+1      	rank 	string 		rank of card- Ace,King,Queen,Jack,no. cards(2 to 10).
+2 	value 	tinyint 	value associated with rank of card.
+
+Sample
+  	rank 	value
+1 	Ace 	NULL
+2 	2 	2
+3 	3 	3
+===
+
+Table: card_suit
+
+Columns (2)
+  	Name 	Type 		Comment
+1 	suit 	string 		suit on card-clubs/diamonds/hearts/spades.
+2 	color 	string 		color of card-Black/Red.
+
+Sample
+  	suit 		color
+1 	Clubs 		Black
+2 	Diamonds 	Red
+3 	Hearts 		Red
+===
+
+Table: games
+
+Columns (8)
+  	Name 		Type 		Comment
+1 	id 		int 		PK,Game ID.
+2 	name 		string 		
+3 	inventor 	string 			
+4 	year 		string 		
+5 	min_age 	tinyint 	
+6	min_players	tinyint		
+7	max_players	tinyint
+8 	list_price	decimal(5,2)	unknown Units (?? US dollars ??)
+
+Sample
+  	id 	name 		inventor 		year 	min_age 	min_players 	max_players 	list_price
+1 	1 	Monopoly 	Elizabeth Magie 	1903 	8 		2 		6 		19.99
+2 	2 	Scrabble 	Alfred Mosher Butts 	1938 	8 		2 		4 		17.99
+3 	3 	Clue 		Anthony E. Pratt 	1944 	8 		2 		6 		9.99
+===
+
+Table: inventory
+
+Columns (5)
+  	Name 	Type 		Comment
+1 	shop 	string 	
+2 	game 	string 	
+3 	qty 	int 	
+4 	aisle 	tinyint 	isle no. in inventory.
+5 	price 	decimal(5,2) 	unknown Units (?? US dollars ??)
+
+Sample
+  	shop 		game 		qty 	aisle 	price
+1 	Dicey 		Monopoly 	7 	3 	17.99
+2 	Dicey 		Clue 		3 	NULL 	9.99
+3 	Board 'Em 	Monopoly 	11 	2 	25.00
+===
+===
+
